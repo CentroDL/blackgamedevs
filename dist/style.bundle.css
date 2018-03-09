@@ -165,6 +165,21 @@ footer {
   padding: 20px 0;
 }
 
+.dev-gallery{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.developer {
+  width: 250px;
+  height: 150px;
+  padding: 5px;
+  border: 1px #EF3054 solid;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
 @media screen and (min-width: 780px) {
   .grid-list {
     display: -webkit-flex; /* Fallback for non-grid-supported browsers */
