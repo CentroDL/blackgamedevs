@@ -698,7 +698,7 @@ module.exports = {
     ],
     "image": "http://image-link-here.com/image.png",
     "location": "United States of America",
-    "name": "...",
+    "name": "Cukia Kimani",
     "skills": [
       "game design",
       "programming"
