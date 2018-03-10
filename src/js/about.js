@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 export default class About extends Component {
   render(){
@@ -7,9 +8,7 @@ export default class About extends Component {
         <h1>ABOUT</h1>
 
         <p>
-          Here's some info about our group and the existence of this page.
-
-          Do you agree? No? Tough shit.
+          A project by <a href="https://quantumbox.itch.io/">Arthur Ward Jr</a>, <a href="http://cattsmall.com/">Catt Small</a>, & <a href="http://chrisalgoo.com/">Chris Algoo</a>. Want to add to the list? Go here.
         </p>
       </div>
     )
