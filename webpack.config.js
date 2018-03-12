@@ -1,7 +1,12 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-// Used for extracting CSS
+
+// Used for converting SCSS into CSS, and packaging it into it's own CSS bundle to be loaded in parallel with the JS
+// as opposed to with
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+// TODO(CentroDL): hash it in prod build command so we can get some sweet sweet caching
+// const extractSCSS = new ExtractTextPlugin('style-[contenthash].bundle.css');
+const extractSCSS = new ExtractTextPlugin('style.bundle.css');
 
 const paths = {
   DIST: path.resolve(__dirname, 'dist'),
@@ -19,7 +24,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.join(paths.SRC, 'index.html')
     }),
-    new ExtractTextPlugin('style.bundle.css')
+    extractSCSS
   ],
   module: {
     rules: [
@@ -31,9 +36,10 @@ module.exports = {
         ]
       },
       {
-        test: /\.css$/,
+        test: /\.scss$/,
         loader: ExtractTextPlugin.extract({
-          use: 'css-loader'
+          fallback: 'style-loader',
+          use: ['css-loader', 'sass-loader' ]
         })
       },
       {

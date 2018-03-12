@@ -2,7 +2,6 @@
 
 body {
   margin: 0 auto;
-  padding: 50px 20px 20px;
   font-family: Martel;
 
   background-color: #111;
@@ -180,6 +179,21 @@ footer {
   border: 1px #EF3054 solid;
   border-radius: 5px;
   margin-bottom: 10px;
+}
+
+#home-icon {
+  /*just force the color here for the "home" link*/
+  color: #EF3054;
+  border-bottom: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header > ul {
+  display: flex;
 }
 
 @media screen and (min-width: 780px) {

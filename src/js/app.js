@@ -10,7 +10,7 @@ import Header from './header';
 import Home from './home';
 import About from './about';
 
-import '../css/styles.css';
+import '../css/styles.scss';
 
 export default class App extends Component {
   render() {
